@@ -1,0 +1,57 @@
+<%- include('./partials/top.ejs')%>
+<%- include('./partials/topbar.ejs')%>
+<%- include('./partials/navbar.ejs')%>
+<form method="post" action="/booknow/<%= JSON.stringify(dat)%>">
+    <table border="1" class="table">
+        <tr>
+            <th>RoomType</th>
+            <td><%= dat.RoomType %></td>
+        </tr>
+        <tr><th>Checkindate</th> 
+            <td><%= dat.Checkindate %></td></tr>
+              <tr>  <th>CheckOutDate</th>
+          
+                <td><%= dat.CheckOutDate %></td>  </tr> 
+                <tr>
+                    <th>Facilities</th>
+                     
+            <td><%=  dat.Facilities %></td>
+                </tr>
+              
+             <tr>
+                <th>NoofGuest</th>
+                
+            <td><%= dat.NoofGuest %></td>
+
+             </tr>
+               <tr>
+                <th>username</th>
+                <td><%=  dat.username %></td>
+               </tr>
+            <tr>
+                <th>moblie</th>
+                <td><%= dat.moblie %></td>
+            </tr>
+            <tr>
+                <th>address</th>
+                <td><%=  dat.address %></td>
+
+
+            </tr>
+               <tr>
+                <th>Noofroom</th>
+                    
+            <td><%=  dat.Noofroom %></td>
+
+               </tr>
+               <th>total cost</th>
+                    
+               <td> <%= dat.totalCost     %></td>    
+   
+                  </tr>
+                  
+    </table>
+    <input type="submit" value="Book Now">
+  
+</form>
+    <%- include('./partials/bottom.ejs')%>

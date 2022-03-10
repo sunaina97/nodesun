@@ -1,0 +1,159 @@
+<%- include('./partials/top.ejs')%>
+<%- include('./partials/topbar.ejs')%>
+<%- include('./partials/navbar.ejs')%>
+
+
+    <form action="/summary" method="post">
+        <div class="body">
+            <h2 class="card-inside-title">Booking Detail</h2>
+            <img src="/images/hotel.jpg" width="800px" height="200px">
+             <div class="form-group">
+                            <div class="form-line">
+                                <input type="text" class="form-control" placeholder="Customername" name="username">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-line">
+                               <div class="row clearfix">
+                    <div class="col-sm-12">
+                          <input type="text" class="form-control" placeholder="MobileNumber" name="mobile" >
+                            </div>
+            
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-line">
+                       <div class="row clearfix">
+            <div class="col-sm-12">
+              <input type="text" class="form-control" placeholder="Address" name="address">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <div class="body">
+                <p>Room Type</p>
+                <div class="row clearfix">
+                    <div class="col-sm-6">
+                        <select class="form-control show-tick" name="roomtype">
+                            <option value="">-- Please select --</option>
+                            <option value="Delux">Delux</option>
+                            <option value="Non AC">Non AC</option>
+                            <option value="AC">AC</option>
+                          
+                        </select>
+                    </div>
+                 
+                </div>
+            </div>
+            <div class="body">
+                <p>Number of Room</p>
+                <div class="row clearfix">
+                    <div class="col-sm-6">
+                        <select class="form-control show-tick" name="noofroom">
+                            <option value="">-- Please select --</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                 
+                </div>
+            </div>
+
+            <div class="body">
+                <p>Number of Guest</p>
+                <div class="row clearfix">
+                    <div class="col-sm-6">
+                        <select class="form-control show-tick" name="noofguest">
+                            <option value="">-- Please select --</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                 
+                </div>
+            </div>
+
+            <div class="body">
+                <p>facilities</p>
+                <div class="row clearfix">
+                    <div class="col-sm-6">
+                        <select class="form-control show-tick"   multiple name="facilities">
+                            <option value="">-- Please select --</option>
+                            <option value="wi-fi">wi-fi</option>
+                            <option value="parking">parking</option>
+                            <option value="game room">game room</option>
+            
+                        </select>
+
+                    
+            </div>
+            </div>
+            </div>  
+                           
+                 <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                        
+                            <ul class="header-dropdown m-r--5">
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <i class="material-icons">more_vert</i>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="javascript:void(0);">Action</a></li>
+                                        <li><a href="javascript:void(0);">Another action</a></li>
+                                        <li><a href="javascript:void(0);">Something else here</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="body">
+                            <div class="row clearfix">
+                           <div class="col-xs-6">
+                                    <h2 class="card-inside-title">Date-in-date</h2>
+                                    <div class="input-daterange input-group" id="bs_datepicker_range_container">
+                                        <div class="form-line">
+                                            <input type="date" class="form-control" placeholder="Check-in-date" name="checkindate">
+                                        </div>
+                                        <span class="input-group-addon">to</span>
+                                        <div class="form-line">
+                                            <input type="date" class="form-control" placeholder="Check-out-date"name="checkoutdate">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--#END# Bootstrap Date Picker -->   
+            <input type="submit" value="next">        
+    </form>
+      <!-- <script>
+          
+          var room = ["delux", "nonac", "ac"];
+          var fac = ["wifi", "game room", "parking"];
+          if(room[0])
+
+      </script> -->
+
+<%- include('./partials/bottom.ejs')%>

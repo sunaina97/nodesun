@@ -1,0 +1,53 @@
+<%- include('./partials/top.ejs')%>
+<%- include('./partials/topbar.ejs')%>
+<%- include('./partials/navbar.ejs')%>
+              
+            <div class="body table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>S no</th>
+                            <th>Username</th>
+                            <th>Mobile</th>
+                            <!-- <th>Address</th> -->
+                            <th>RoomType</th>
+                            <th>Checkindate</th>
+                            <th>CheckOutDate</th>
+                            <th>Facilities</th>
+                            <!-- <th>NoofGuest</th> -->
+                            <th>Noofroom</th>
+                            <th>totalCost</th>
+                            <% if(!isadmin) {%>
+                            <th>Cancel booking</th>
+                            <% } %>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(var i=0;i<result.length;i++) {%>
+                        <tr>
+                            <td><%= i+1%></td>
+                            <td><%= result[i].username %></td>
+                            <td><%= result[i].moblie %></td>
+                            <!-- <td><%= result[i].address %></td> -->
+                            <td><%= result[i].RoomType %></td>
+                            <td><%= result[i].Checkindate%></td>
+                            <td><%= result[i].CheckOutDate%></td>
+                            <td><%= result[i].Facilities%></td>
+                            <!-- <td><%= result[i].NoofGuest %></td> -->
+                            <td><%= result[i].Noofroom %></td>
+                            <td><%=result[i].totalCost     %></td> 
+                            <% if(!isadmin) {%>
+                            <td><a href="deletebooking/<%= result[i]._id%>">cancel</a></td>
+                            <% } %>
+                        </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+            </div>        
+ 
+
+    
+   
+    
+
+    <%- include('./partials/bottom.ejs')%>
